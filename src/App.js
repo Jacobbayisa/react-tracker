@@ -1,12 +1,40 @@
 import Header from './components/Header'
-
+import Tasks from './components/Tasks'
+import { useState } from 'react'
 
 
 function App() {
+  const[tasks, setTasks] = useState(
+    [
+      {
+        "id": 1,
+        "text": "Doctors Appointment",
+        "day": "Feb 5th at 2:30pm",
+        "reminder": true
+      },
+      {
+        "id": 2,
+        "text": "Meeting at School",
+        "day": "Feb 6th at 1:30pm",
+        "reminder": true
+      },
+      {
+        "id": 3,
+        "text": "It is nice Jacob",
+        "Day": "Day of your anniversary",
+        "reminder": true
+      }
+    ]
+  )
+
+  //Delete task
+  const deleteTask = () => {
+    
+  }
   return (
     <div className="container">
       <Header />
-      Hello
+      <Tasks tasks = {tasks} />
     </div>
   );
 }
